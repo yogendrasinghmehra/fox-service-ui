@@ -1,0 +1,97 @@
+      <!-- ========== signin-section start ========== -->
+      <section class="signin-section">
+        <div class="container-fluid">
+       
+
+          <div class="row g-0 auth-row">
+            <div class="col-lg-6">
+              <div class="auth-cover-wrapper bg-primary-100">
+                <div class="auth-cover">
+                  <div class="title text-center">
+                    <h1 class="text-primary mb-10">Welcome Back</h1>
+                    <p class="text-medium">
+                      <!-- Sign in to your Existing account to continue -->
+                    </p>
+                  </div>
+                  <div class="cover-image">
+                    <img src="assets/images/auth/signin-image.svg" alt="" />
+                  </div>
+                  <div class="shape-image">
+                    <img src="assets/images/auth/shape.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end col -->
+            <div class="col-lg-6">
+              <div class="signin-wrapper">
+                <div class="form-wrapper">
+                  <h6 class="mb-30 text-center">Registered User Login</h6>
+              
+                  <form [formGroup]="loginFormGroup" id="loginForm">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="input-style-1">
+                          <label>User Id</label>
+                          <input 
+                          type="text" 
+                          placeholder="User Id" 
+                          formControlName="email" 
+                          class="form-control"
+                          [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+
+                          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">User id is required</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end col -->
+                      <div class="col-12">
+                        <div class="input-style-1">
+                          <label>Password</label>
+                          <input 
+                          type="password" 
+                          placeholder="Password" 
+                          formControlName="password"
+                          class="form-control"
+                          [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end col -->
+                      <div class="col-xxl-6 col-lg-12 col-md-6">
+                  
+                      </div>
+                      <!-- end col -->
+                      <div class="col-xxl-6 col-lg-12 col-md-6">
+                        <div
+                          class="text-start text-md-end text-lg-start text-xxl-end mb-30"
+                        >
+                          <a routerLink="/auth/forgot-password">Forgot Password?</a>
+                        </div>
+                      </div>
+                      <!-- end col -->
+                      <div class="col-12">
+                        <div
+                          class="button-group d-flex justify-content-center flex-wrap">
+                          <button
+                            class="main-btn primary-btn btn-hover w-100 text-center"
+                            (click)="onLoginFormSubmit()">
+                            Login
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end row -->
+                  </form>
+                 
+                </div>
+              </div>
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+      </section>

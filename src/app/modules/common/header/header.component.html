@@ -1,0 +1,37 @@
+ <!-- Masthead-->
+ <!-- <header class="masthead">
+  <div class="container">
+      <div class="masthead-subheading">Welcome To Our Studio!</div>
+      <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+      <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+  </div>
+</header> -->
+
+
+<carousel [isAnimated]="true">
+  <slide *ngFor="let slide of slides">
+    <div class="overlay"></div>
+    <img [src]="slide.imageUrl" [alt]="slide.imageAltText">
+    <div class="carousel-caption d-none d-md-block">
+      <h3>{{slide.headingText}}</h3>
+      <p>{{slide.subHeadingText}}</p>
+    </div>
+  </slide>
+ 
+</carousel>
+
+<div class="container" id="search-bar">
+  <div class="row">
+  <div class="col-3"></div>
+    <div class="col-6 text-centre">
+      <div class="form-group">
+       <select class="form-control">
+         <option>Delhi</option>
+         <option>Noida</option>
+         <option>Gaziabad</option>
+       </select>
+      </div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>
