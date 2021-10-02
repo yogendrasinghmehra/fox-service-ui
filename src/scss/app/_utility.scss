@@ -1,4 +1,20 @@
-.pointer
-{
- cursor: pointer;
+.pointer {
+  cursor: pointer;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.shadow-lg {
+  box-shadow: -0.0625rem 0 0.625rem 0 rgb(0 0 0 / 7%),
+    0.3125rem 1.25rem 2.5rem 0 rgb(0 0 0 / 4%) !important;
+}
+
+.text-muted {
+  color: #9e9fb4 !important;
+}
+
+.fs-ms {
+  font-size: 0.8125rem !important;
 }

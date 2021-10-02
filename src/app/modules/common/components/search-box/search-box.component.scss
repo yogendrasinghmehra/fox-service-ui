@@ -1,0 +1,13 @@
+:host::ng-deep {
+  #search-bar {
+    padding: 1rem;
+    border-radius: 1rem;
+    --bs-bg-opacity: 1;
+    background-color: #f7f7fc !important;
+    border: 1px solid #e9e9f2 !important;
+    margin-top: -60px;
+    z-index: 5;
+    position: relative;
+    //margin-top: -68px;
+  }
+}
