@@ -1,0 +1,151 @@
+:host::ng-deep {
+  $text-primary: #b6b6b6;
+  $text-secondary: #ececec;
+  $bg-primary: #23232e;
+  $bg-secondary: #141418;
+  $transition-speed: 600ms;
+
+  nav::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  nav::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+
+  nav::-webkit-scrollbar-thumb {
+    //background: #6649b8;
+  }
+
+  .side-navbar {
+    position: fixed;
+    background-color: $bg-primary;
+    transition: width 600ms ease;
+    overflow: auto;
+
+    .navbar-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+
+      .nav-item {
+        width: 100%;
+        &:last-child {
+          margin-top: auto;
+        }
+
+        .nav-link {
+          display: flex;
+          align-items: center;
+          height: 3.5rem;
+          color: $text-primary;
+          text-decoration: none;
+          filter: grayscale(100%) opacity(0.7);
+          transition: $transition-speed;
+          &:hover,
+          &.active {
+            filter: grayscale(0%) opacity(1);
+            background: $bg-secondary;
+            color: $text-secondary;
+          }
+        }
+
+        .navbar-inner {
+          .nav-link {
+            height: 2.5rem;
+          }
+        }
+      }
+      .multi-level {
+        .navbar-inner {
+          display: none;
+        }
+
+        &:hover {
+          .navbar-inner {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .link-text {
+    margin-left: 1rem;
+  }
+
+  .nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    height: 1.5rem;
+  }
+
+  .fa-primary {
+    color: #ffc800;
+  }
+
+  .fa-secondary {
+    color: #ffc800;
+  }
+
+  .fa-primary,
+  .fa-secondary {
+    transition: $transition-speed;
+  }
+
+  .logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    // padding-bottom: 1rem;
+    margin: 1rem;
+    text-align: center;
+    color: $text-secondary;
+    // background: $bg-secondary;
+    font-size: 1rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+    //border-bottom: 0.01rem solid #ececec;
+  }
+
+  .logo svg {
+    //transform: rotate(0deg);
+    //transition: $transition-speed;
+    height: 1.5rem;
+  }
+
+  .logo-text {
+    //display: inline;
+    //position: absolute;
+    //left: -999px;
+    // transition: $transition-speed;
+  }
+
+  .side-navbar:hover .logo svg {
+    transform: rotate(-180deg);
+  }
+
+  /* Large screens */
+  @media only screen and (min-width: 600px) {
+    .side-navbar {
+      top: 0;
+      width: 16rem;
+      height: 100vh;
+    }
+
+    .side-navbar:hover .link-text {
+    }
+
+    .side-navbar:hover .logo svg {
+      // margin-left: 11rem;
+    }
+
+    .side-navbar:hover .logo-text {
+      //left: 0px;
+    }
+  }
+}

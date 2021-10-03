@@ -8,11 +8,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/common/user.module').then((m) => m.UserModule),
   },
-  // {
-  //   // path:'admin',
-  //   // loadChildren:()=> import('./modules/admin/admin.module').then(m=>m.AdminModule),
-  //   // canActivate:[AuthGuard]
-  // },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./modules/admin/admin.module').then((m) => m.AdminModule),
+    //canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
