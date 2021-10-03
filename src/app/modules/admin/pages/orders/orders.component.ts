@@ -10,6 +10,6 @@ export class OrdersComponent implements OnInit {
   constructor(private messageService: AlertMessageService) {}
 
   ngOnInit(): void {
-    this.messageService.info('hii');
+    //this.messageService.info('welcome to order page ');
   }
 }
