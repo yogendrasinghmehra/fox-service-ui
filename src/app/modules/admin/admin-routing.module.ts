@@ -23,6 +23,14 @@ const routes: Routes = [
         loadChildren: () =>
           import('./pages/orders/orders.module').then((m) => m.OrdersModule),
       },
+
+      {
+        path: 'inventory',
+        loadChildren: () =>
+          import('./pages/inventory/inventory.module').then(
+            (m) => m.InventoryModule
+          ),
+      },
     ],
   },
 ];
