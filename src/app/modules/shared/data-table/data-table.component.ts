@@ -1,7 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ColDef } from 'ag-grid-community';
-import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-data-table',
@@ -9,18 +6,11 @@ import { Observable } from 'rxjs/internal/Observable';
   styleUrls: ['./data-table.component.scss'],
 })
 export class DataTableComponent implements OnInit {
-  columnDefs: ColDef[] = [
-    { field: 'make', sortable: true, filter: true },
-    { field: 'model', sortable: true, filter: true },
-    { field: 'price', sortable: true, filter: true },
-  ];
-  rowData: Observable<any[]>;
-
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.rowData = this.http.get<any[]>(
-      'https://www.ag-grid.com/example-assets/small-row-data.json'
-    );
+    // this.rowData = this.http.get<any[]>(
+    //   'https://www.ag-grid.com/example-assets/small-row-data.json'
+    // );
   }
 }

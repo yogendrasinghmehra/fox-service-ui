@@ -1,2 +1,63 @@
 :host::ng-deep {
+  footer {
+    hr {
+      margin: 1rem 0;
+      color: inherit;
+      background-color: currentColor;
+      border: 0;
+      opacity: 0.25;
+    }
+    .widget-light .widget-title {
+      color: #fff;
+    }
+    .widget-title {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+    .widget ul,
+    .widget ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .widget ul > li,
+    .widget ol > li {
+      display: block;
+      margin-bottom: 0.375rem;
+    }
+    .widget-light .widget-link {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: normal;
+    }
+    .widget-link {
+      display: block;
+      position: relative;
+      padding: 0.25rem 0;
+      transition: color 0.25s ease-in-out;
+      color: #5a5b75;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .nav-link-style.nav-link-light {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .nav-link-style {
+      display: inline-block;
+      transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+        box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+      color: #5a5b75;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .list-inline-item:not(:last-child) {
+      margin-right: 1.25rem;
+    }
+  }
+  .bg-dark {
+    background-color: rgba(55, 56, 78, 1) !important;
+  }
 }
