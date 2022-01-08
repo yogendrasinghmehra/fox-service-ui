@@ -22,6 +22,7 @@ export class AlertMessageService {
     }
 
     error(message: string, options?: any) {
+        
         this.alert(new Alert({ ...options, type: AlertType.Error, message }));
     }
 
