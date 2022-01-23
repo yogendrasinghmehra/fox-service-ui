@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port=4500",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "github-build":"ng build --base-href https://yogendrasinghmehra.github.io/fox-service-ui/",
-    "github-deploy":"npx angular-cli-ghpages --dir=dist/fox-service-ui"
+    "github-build": "ng build --base-href https://yogendrasinghmehra.github.io/fox-service-ui/",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/fox-service-ui"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +22,7 @@
     "@angular/platform-server": "12.1.2",
     "@angular/router": "12.1.0",
     "@nguniversal/express-engine": "12.1.0",
+    "angular-feather": "^6.2.0",
     "bootstrap": "^5.1.2",
     "express": "4.15.2",
     "ngx-bootstrap": "6.2.0",

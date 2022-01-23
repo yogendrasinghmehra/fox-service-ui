@@ -1,16 +1,16 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { SampleList } from "../../modals/admin/dashboard.modal";
+import { City } from "../../modals/admin/city.modals";
 import { RestService } from "../rest.service";
 
 @Injectable()
-export class DashboardService {
+export class CityService {
 
     constructor(private restService:RestService) {}
     
-    getAll():Observable<SampleList>{
-        return this.restService.get("/users").pipe(map(data => data));
+    getAll():Observable<City[]>{
+        return this.restService.get("/city/list").pipe(map(data => data));
     }
 
 }

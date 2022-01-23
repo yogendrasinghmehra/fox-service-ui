@@ -1,0 +1,45 @@
+
+
+  <!-- Alternative card style: no border + shadow -->
+<div class="card border-0 shadow">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="card-title">City List</h5>
+        </div>
+        <div class="col-md-6 text-right">
+          <a  
+          class="btn btn-outline-primary btn-icon"
+          [routerLink]="['/admin/metadata/city/add']">+ Add New</a>
+        </div>
+      </div>
+    
+     
+    <!-- Light table with hoverable rows -->
+<div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Actions</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of cityList">
+          <th scope="row">{{city.id}}</th>
+          <td>{{city.name}}</td>
+          <td>{{city.status}}</td>
+          <td>
+           <a [routerLink]="['/admin/metadata/city/'+city.id+'/edit']">Edit</a>
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>
+    </div>
+  </div>
+  

@@ -44,25 +44,25 @@ export class LoginComponent implements OnInit {
     if (this.loginFormGroup.invalid) return;
 
     //calling api
-    this.authService.login(this.loginFormGroup.value).subscribe((res:TokenResponse)=>{
-      this.jwtService.destroyToken();
-      this.jwtService.saveToken(res.token);
-      this.router.navigateByUrl('/admin/dashboard');
-    },
-    err=>{
-      console.log(err)
-      if(err.errors)
-      {
-        this.alertService.error(err.errors[0]);
-      }
-      else
-      {
-        this.alertService.error("Something went wrong.");
-      }
+    // this.authService.login(this.loginFormGroup.value).subscribe((res:TokenResponse)=>{
+    //   this.jwtService.destroyToken();
+    //   this.jwtService.saveToken(res.token);
+    //   this.router.navigateByUrl('/admin/dashboard');
+    // },
+    // err=>{
+    //   console.log(err)
+    //   if(err.errors)
+    //   {
+    //     this.alertService.error(err.errors[0]);
+    //   }
+    //   else
+    //   {
+    //     this.alertService.error("Something went wrong.");
+    //   }
       
-    }
-    );
+    // }
+    // );
 
-    //this.router.navigateByUrl('/admin/dashboard');
+    this.router.navigateByUrl('/admin/dashboard');
   }
 }

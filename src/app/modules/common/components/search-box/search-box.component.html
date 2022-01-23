@@ -1,55 +1,64 @@
 <div class="container" id="search-bar">
+  <form [formGroup]="searchFromGroup">
     <div class="d-lg-flex align-items-center">
         <div class="d-sm-flex align-items-center flex-grow-1">
           <div class="mb-3 pb-1 w-100 mb-sm-4 me-sm-3">
+            <label class="form-label">City</label>
+            <select class="form-control" id="from-destination" formControlName="city">
+              <option value="" disabled selected>Select</option>                
+                <option value="noida">Noida</option>
+                <option value="delhi">Delhi</option>
+                <option value="gaziabad">Gaziabad</option>
+                <option value="ranikhet">Ranikhet</option>
+                <option value="almora">Almora</option>
+              </select>
+          </div>
+          <div class="mb-3 pb-1 w-100 mb-sm-4 me-sm-3">
             <label class="form-label" for="from-destination">Vehicle Type</label>
-            <select class="form-control" id="from-destination">
-              <option value="" disabled="" hidden="">Bike</option>
-              <option value="Abu Dhabi, UAE">Bike</option>
-              <option value="Abu Dhabi, UAE">Scooty</option>
+            <select class="form-control" id="from-destination" formControlName="vichleType">
+              <option value="" disabled selected>Select</option>                
+              <option value="bike">Bike</option>
+              <option value="scooty">Scooty</option>
               
             </select>
           </div>
-          <div class="mb-3 pb-1 w-100 mb-sm-4 me-sm-3">
-            <label class="form-label" for="to-destination">Vehicle Manufacturers</label>
-            <select  class="form-control" id="to-destination">
-              <option value="" selected="" disabled="" hidden="">Honda</option>
-              <option value="Abu Dhabi, UAE">TVS</option>
-              <option value="Amsterdam, NL">BAJAJ</option>
-              <option value="Berlin, GER">HERO</option>
-              <option value="Brussels, BE">YAMAHA</option>
-              <option value="Buenos Aires, ARG">SUZUKI</option>
-              <option value="Canberra, AU">KTM</option>
-             
-            </select>
-          </div>
+         
         </div>
         <div class="d-sm-flex align-items-center flex-grow-1">
           <div class="mb-3 pb-1 w-100 mb-sm-4 me-sm-3">
-            <label class="form-label">Modal Number</label>
-            <select  class="form-control" id="from-destination">
-                <option value="" disabled="" hidden="">Upto 150cc</option>
-                <option value="Abu Dhabi, UAE">Upto 150cc</option>
-                <option value="Abu Dhabi, UAE">150cc - 250cc</option>
-                <option value="Abu Dhabi, UAE">251cc - 350cc</option>
-                <option value="Abu Dhabi, UAE">Above 350cc</option>
-
+            <label class="form-label" for="to-destination">Vehicle Manufacturers</label>
+            <select  class="form-control" id="to-destination" formControlName="vichleManufacturers">
+              <option value="" selected disabled>Select</option>
+              <option value="honda">Honda</option>
+              <option value="tvs">TVS</option>
+              <option value="bajaj">BAJAJ</option>
+              <option value="hero">HERO</option>
+              <option value="yamaha">YAMAHA</option>
+              <option value="suzuki">SUZUKI</option>
+              <option value="ktm">KTM</option>
+             
             </select>
           </div>
           <div class="mb-3 pb-1 w-100 mb-sm-4 me-sm-3">
-            <label class="form-label">City</label>
-            <select class="form-control" id="from-destination">
-                <option value="" disabled="" hidden="">From where?</option>
-                <option value="Abu Dhabi, UAE">Noida</option>
-                <option value="Amsterdam, NL">Delhi</option>
-                <option value="Berlin, GER">Gaziabad</option>
-                <option value="Moscow, RU">Ranikhet</option>
-                <option value="Stockholm, SW">Almora</option>
-              </select>
+            <label class="form-label">Modal Number</label>
+            <select  class="form-control" id="from-destination" formControlName="modalNumber">
+                <option value="" disabled selected>Select</option>
+                <option value="upto-150cc">Upto 150cc</option>            
+                <option value="150cc-250cc">150cc - 250cc</option>
+                <option value="251cc-350cc">251cc - 350cc</option>
+                <option value="above-350cc">Above 350cc</option>
+
+            </select>
           </div>
+         
           <div class="text-center text-sm-start mt-2 mt-sm-4 mb-4">
-            <button class="btn btn-primary" type="submit">Book</button>
+            <input
+            class="btn btn-primary" 
+            type="button" 
+            value="Book"
+            (click)="onBookClick()">
           </div>
         </div>
       </div>
+    </form>
   </div>

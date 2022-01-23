@@ -31,6 +31,13 @@ const routes: Routes = [
             (m) => m.InventoryModule
           ),
       },
+      {
+        path: 'metadata',
+        loadChildren: () =>
+          import('./pages/metadata/metadata.module').then(
+            (m) => m.MetadataModule
+          ),
+      },
     ],
   },
 ];

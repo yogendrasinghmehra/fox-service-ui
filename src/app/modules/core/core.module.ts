@@ -5,9 +5,6 @@ import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 import { RestService } from './services/rest.service';
 import { JwtService } from './services/jwt.service';
 import { AuthService } from './services/auth.service';
-import { DashboardService } from './services/admin/dashboard.service';
-import { AdminHeaderService } from './services/admin/admin-header.service';
-
 
 
 @NgModule({
@@ -20,11 +17,7 @@ import { AdminHeaderService } from './services/admin/admin-header.service';
     {provide:HTTP_INTERCEPTORS,useClass:HttpTokenInterceptor,multi:true},
     RestService,
     JwtService,
-    AuthService,
-    
-    //admin modules services
-    AdminHeaderService,
-    DashboardService
+    AuthService
   ]
 })
 export class CoreModule { }

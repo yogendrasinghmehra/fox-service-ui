@@ -55,6 +55,10 @@ const routes: Routes = [
         loadChildren: () =>
           import('../auth/auth.module').then((m) => m.AuthModule),
       },
+      {
+        path:':city/:type/:manufacturer/:model-number',
+        loadChildren:()=> import('./pages/services/services.module').then((m)=>m.ServicesModule)
+      }
     ],
   },
 ];

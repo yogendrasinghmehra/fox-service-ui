@@ -1,3 +1,21 @@
+.text-heading {
+  color: #4a4b65 !important;
+}
+.fw-semibold {
+  font-weight: 600 !important;
+}
+
+img, figure {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.bg-danger {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -14,9 +32,18 @@
 .text-muted {
   color: #9e9fb4 !important;
 }
+.fw-medium {
+  font-weight: 500 !important;
+}
+.fs-md {
+  font-size: 0.9375rem !important;
+}
 
 .fs-ms {
   font-size: 0.8125rem !important;
+}
+.fs-xs {
+  font-size: 0.75rem !important;
 }
 
 .border-bottom {
@@ -24,6 +51,12 @@
 }
 .border-light {
   border-color: rgba(255, 255, 255, 0.14) !important;
+}
+.text-right{
+  text-align: right;
+}
+.rounded-pill {
+  border-radius: 50rem !important;
 }
 
 @media (min-width: 768px) {

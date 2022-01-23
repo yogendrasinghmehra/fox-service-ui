@@ -1,0 +1,10 @@
+.meta-link:not(.media) {
+    display: inline-block;
+}
+
+.meta-link {
+    transition: color .2s ease-in-out;
+    color: #797a95;
+    vertical-align: middle;
+    text-decoration: none;
+}

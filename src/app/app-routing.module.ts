@@ -14,6 +14,11 @@ const routes: Routes = [
       import('./modules/admin/admin.module').then((m) => m.AdminModule),
     //canActivate: [AuthGuard],
   },
+  {
+    path:'**',
+    redirectTo:''
+  }
+
 ];
 
 @NgModule({

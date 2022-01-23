@@ -1,0 +1,70 @@
+<div class="card border-0 shadow">
+    <div class="card-body">
+        <h5 class="card-title">Add New City</h5>
+    <!-- Forms validation: status text -->
+<form class="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input class="form-control" type="text" id="validationCustom01" placeholder="First name" value="John" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input class="form-control" type="text" id="validationCustom02" placeholder="Last name" value="Doe" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationCustomUsername" class="form-label">Username</label>
+        <input class="form-control" type="text" id="validationCustomUsername" placeholder="Username" required>
+        <div class="invalid-feedback">Please choose a username.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03" class="form-label">City</label>
+        <select class="form-select" id="validationCustom03" required>
+          <option value="">Choose city...</option>
+          <option value="Dallas">Dallas</option>
+          <option value="Houston">Houston</option>
+          <option value="Los Angeles">Los Angeles</option>
+          <option value="Miami">Miami</option>
+          <option value="New York">New York</option>
+        </select>
+        <div class="invalid-feedback">Please provide a valid city.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option value="">Choose state...</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Colorado">Colorado</option>
+          <option value="Florida">Florida</option>
+          <option value="Indiana">Indiana</option>
+          <option value="Kentucky">Kentucky</option>
+          <option value="Texas">Texas</option>
+        </select>
+        <div class="invalid-feedback">Please provide a valid state.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input class="form-control" type="text" id="validationCustom05" placeholder="Zip" required>
+        <div class="invalid-feedback">Please provide a valid zip.</div>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
+        <div class="invalid-feedback">You must agree before submitting.</div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit Form</button>
+  </form>
+    </div>
+</div>
+
