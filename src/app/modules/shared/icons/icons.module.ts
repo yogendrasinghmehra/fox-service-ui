@@ -5,13 +5,15 @@ import {
   Camera,
   Heart,
   Github,
-  ShoppingCart } from 'angular-feather/icons';
+  ShoppingCart,User,XCircle } from 'angular-feather/icons';
 
 const icons = {
   Camera,
   Heart,
   Github,
-  ShoppingCart
+  ShoppingCart,
+  User,
+  XCircle
 };
 
 

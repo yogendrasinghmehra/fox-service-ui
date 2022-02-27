@@ -5,6 +5,7 @@ import { CityAddComponent } from './city-add/city-add.component';
 import { CityEditComponent } from './city-edit/city-edit.component';
 import { CityListComponent } from './city-list/city-list.component';
 import { CityService } from 'src/app/modules/core/services/admin/city.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { CityService } from 'src/app/modules/core/services/admin/city.service';
   ],
   imports: [
     CommonModule,
-    CityRoutingModule
+    CityRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers:[CityService]
 

@@ -13,4 +13,8 @@ export class CityService {
         return this.restService.get("/city/list").pipe(map(data => data));
     }
 
+    addCity(postParams:City):Observable<any>{
+        return this.restService.post("/city",postParams).pipe(map(data => data));
+    }
+
 }

@@ -56,8 +56,12 @@ const routes: Routes = [
           import('../auth/auth.module').then((m) => m.AuthModule),
       },
       {
-        path:':city/:type/:manufacturer/:model-number',
+        path:'services/:city/:type/:manufacturer/:model-number',
         loadChildren:()=> import('./pages/services/services.module').then((m)=>m.ServicesModule)
+      },
+      {
+        path:'cart',
+        loadChildren:()=> import('./pages/cart/cart.module').then((m)=>m.CartModule)
       }
     ],
   },

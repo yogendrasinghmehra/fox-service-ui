@@ -8,3 +8,10 @@
     vertical-align: middle;
     text-decoration: none;
 }
+
+.nav-heading, .nav-heading a, .nav-heading .nav-heading-title {
+    transition: color .25s ease-in-out,background-color .25s ease-in-out,box-shadow .25s ease-in-out,border-color .25s ease-in-out;
+    color: #4a4b65;
+    font-weight: 600;
+    text-decoration: none;
+}

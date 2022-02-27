@@ -36,7 +36,17 @@
                 <!---->
                 <!---->
                 <!-- <li class="nav-item"><a class="nav-link" href="#portfolio">Register as a Professional</a></li> -->
-                <li class="nav-item"><a class="nav-link" [routerLink]="['/auth/login']" routerLinkActive="router-link-active"  >Login</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/auth/login']" routerLinkActive="router-link-active">
+                        <i-feather name="user"></i-feather>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/cart']" routerLinkActive="router-link-active">
+                        <i-feather name="shopping-cart"></i-feather>
+                        <span class="navbar-tool-badge">3</span>
+                    </a>
+                </li>
                
             </ul>
         </div>

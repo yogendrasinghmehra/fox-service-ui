@@ -34,6 +34,6 @@ export class SearchBoxComponent implements OnInit {
       return;
     }
     const formParams = this.searchFromGroup.value;
-    this.router.navigate(['/', formParams.city, formParams.vichleType, formParams.vichleManufacturers, formParams.modalNumber]);
+    this.router.navigate(['/services', formParams.city, formParams.vichleType, formParams.vichleManufacturers, formParams.modalNumber]);
   }
 }
